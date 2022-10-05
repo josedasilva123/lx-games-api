@@ -1,6 +1,6 @@
 import { Schema, model, ObjectId } from "mongoose";
 
-interface iGame{
+export interface iGame{
     id: string;
     title: string;
     thumbnail: string;

@@ -29,3 +29,13 @@ export const userLoginValidation = () => {
         .withMessage('A senha (password) é obrigatória'),       
     ]
 }
+
+export const userUpdateFavoritesValidation = () => {
+    return[
+        body('favoriteGames').isArray(),
+        body('*.id', 'O id do item precisar ser um número').isNumeric(),
+        body('*.title', 'O título (title) do item precisar ser uma string').isString(),
+        body('*.thumbnail', 'A thumbnail do item precisar ser uma string').isString(),
+        body('*.genre', 'O gênero (genre) do item precisar ser uma string').isString(),
+    ]
+}

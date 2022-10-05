@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { UserLogin } from "./services/Login.service";
 import { UserRegister } from "./services/Register.service";
+import { UserUpdateFavorites } from "./services/UpdateFavorites.service";
 import { iLoginBody, iRegisterBody } from "./types/types";
 
 export default class UserControllers {
@@ -22,6 +23,13 @@ export default class UserControllers {
     const autoLogin = new UserLogin();
     const response = await autoLogin.execute(req.body);
     
+    res.status(200).json(response);
+  }
+
+  static async UpdateFavorites(req: Request, res: Response){
+    const updateFavorites = new UserUpdateFavorites();
+    const response = await updateFavorites.execute(req.body);
+
     res.status(200).json(response);
   }
 }
