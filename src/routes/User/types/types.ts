@@ -1,5 +1,5 @@
-import { iGame } from "../../models/User";
-import { iAuthenticateBody } from "../../types/types";
+import { iGame } from "../../../models/User";
+import { iAuthenticateBody } from "../../../types/types";
 
 export interface iRegisterBody{
     name: string;

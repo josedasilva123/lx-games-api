@@ -1,5 +1,5 @@
 import User from "../../models/User";
-import { iRegisterBody } from "../types/types";
+import { iRegisterBody } from "../../routes/User/types/types";
 import bcrypt from "bcryptjs";
 
 export class UserRegister {

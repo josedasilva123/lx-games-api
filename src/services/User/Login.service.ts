@@ -1,5 +1,5 @@
 import User from "../../models/User";
-import { iLoginBody } from "../types/types";
+import { iLoginBody } from "../../routes/User/types/types";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 

@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import User, { iUser } from "../../models/User";
-import { iUpdateFavoritesBody } from "../types/types";
+import { iUpdateFavoritesBody } from "../../routes/User/types/types";
 
 export class UserUpdateFavorites {
   async execute(body: iUpdateFavoritesBody) {

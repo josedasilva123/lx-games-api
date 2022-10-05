@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { UserLogin } from "./services/Login.service";
-import { UserRegister } from "./services/Register.service";
-import { UserUpdateFavorites } from "./services/UpdateFavorites.service";
+import { UserLogin } from "../../services/User/Login.service";
+import { UserRegister } from "../../services/User/Register.service";
+import { UserUpdateFavorites } from "../../services/User/UpdateFavorites.service";
 import { iLoginBody, iRegisterBody } from "./types/types";
 
 export default class UserControllers {
