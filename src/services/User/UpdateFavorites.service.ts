@@ -23,6 +23,6 @@ export class UserUpdateFavorites {
         }
     )
     
-    return { message: "Alteração processada com sucesso!"}
+    return { message: "Alteração realizada com sucesso!"}
   }
 }
