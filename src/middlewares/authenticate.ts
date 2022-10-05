@@ -13,15 +13,8 @@ export function Authenticate(req: Request, res: Response, next: NextFunction) {
           if (err) {
             throw new Error("Sua token expirou ou é inválida.");
           }
-
-          const user = {
-            id: decoded?.id,
-            name: decoded?.name,
-            email: decoded?.email,
-          };
-
-          //Anexa usuário no body quando necessário
-          req.body.user = user;
+          
+          req.body.id = decoded?.id,
 
           next();
         } catch (error) {

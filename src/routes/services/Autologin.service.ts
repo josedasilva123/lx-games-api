@@ -1,13 +1,26 @@
+import { ObjectId } from "mongodb";
+import User, { iUser } from "../../models/User";
 import { iAuthenticateBody } from "../../types/types";
 
 export class UserAutoLogin {
   async execute(body: iAuthenticateBody) {
-    const user = body.user;
+    const { id } = body;
 
-    if (user) {
-      return { user: user };
-    } else {
-      throw new Error("Desculpe, usuário inválido.");
+    const userID = new ObjectId(id);
+
+    const user = await User.findOne({ _id: userID }) as iUser;
+
+    if(!user){
+      throw new Error("Usuário não encontrado."); 
     }
+
+    return {
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        favoriteGames: user.favoriteGames,
+      },
+    };
   }
 }

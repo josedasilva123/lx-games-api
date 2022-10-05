@@ -20,8 +20,6 @@ export class UserLogin {
     const token = jwt.sign(
       {
         id: user._id,
-        name: user.name,
-        email: user.email,
       },
       process.env.JWT_SECRETKEY as string,
       { expiresIn: "12h" }
@@ -32,6 +30,7 @@ export class UserLogin {
         id: user._id,
         name: user.name,
         email: user.email,
+        favoriteGames: user.favoriteGames,
       },
       token: token,
     };
