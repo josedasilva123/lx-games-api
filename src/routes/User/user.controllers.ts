@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { UserAutoLogin } from "../../services/User/Autologin.service";
 import { UserLogin } from "../../services/User/Login.service";
 import { UserRegister } from "../../services/User/Register.service";
 import { UserUpdateFavorites } from "../../services/User/UpdateFavorites.service";
@@ -20,7 +21,7 @@ export default class UserControllers {
   }
 
   static async AutoLogin(req: Request, res: Response) {
-    const autoLogin = new UserLogin();
+    const autoLogin = new UserAutoLogin();
     const response = await autoLogin.execute(req.body);
     
     res.status(200).json(response);
