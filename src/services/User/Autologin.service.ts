@@ -5,7 +5,6 @@ import { iAuthenticateBody } from "../../types/types";
 export class UserAutoLogin {
   async execute(body: iAuthenticateBody) {
     const { id } = body;
-    console.log(id);
 
     const userID = new ObjectId(id);
 
