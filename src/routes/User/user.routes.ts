@@ -7,9 +7,9 @@ import { userRegisterValidation, userLoginValidation, userUpdateFavoritesValidat
 
 const router = express.Router();
 
-router.post("/", Validate, userRegisterValidation() , HandleErrors(UserControllers.Register));
-router.post("/login", Validate, userLoginValidation() , HandleErrors(UserControllers.Login));
+router.post("/", userRegisterValidation(), Validate, HandleErrors(UserControllers.Register));
+router.post("/login", userLoginValidation(), Validate, HandleErrors(UserControllers.Login));
 router.get("/autologin", Authenticate, HandleErrors(UserControllers.AutoLogin));
-router.patch("/favorites", Validate, userUpdateFavoritesValidation(), Authenticate, HandleErrors(UserControllers.UpdateFavorites));
+router.patch("/favorites", userUpdateFavoritesValidation(), Validate, Authenticate, HandleErrors(UserControllers.UpdateFavorites));
 
 export default router;
