@@ -2,7 +2,13 @@
 
 Uma API para aplicação Lex Games, contendo rotas de usuário (Cadastro, Login e Auto-login), além da rota de atualização de games favoritos.
 
-Não foi feito o deploy dessa api ambiente de teste, mas você pode clonar e iniciar com o seguinte comando: 
+Url:
+
+```ssh
+https://lx-games-api.onrender.com/
+```
+
+Você pode iniciar essa api localmente por meio do comando abaixo, porém as variavéis de ambiente DATABASE_URL e JWT_SECRETKEY serão necessárias.
 
 ```ssh
 yarn dev
