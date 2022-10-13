@@ -33,9 +33,9 @@ export const userLoginValidation = () => {
 export const userUpdateFavoritesValidation = () => {
     return[
         body('favoriteGames').isArray(),
-        body('*.id', 'O id do item precisar ser um número').isNumeric(),
-        body('*.title', 'O título (title) do item precisar ser uma string').isString(),
-        body('*.thumbnail', 'A thumbnail do item precisar ser uma string').isString(),
-        body('*.genre', 'O gênero (genre) do item precisar ser uma string').isString(),
+        body('favoriteGames.*.id', 'O id do item precisar ser um número').isNumeric(),
+        body('favoriteGames.*.title', 'O título (title) do item precisar ser uma string').isString(),
+        body('favoriteGames.*.thumbnail', 'A thumbnail do item precisar ser uma string').isString(),
+        body('favoriteGames.*.genre', 'O gênero (genre) do item precisar ser uma string').isString(),
     ]
 }

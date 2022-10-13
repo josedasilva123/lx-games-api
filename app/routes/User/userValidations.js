@@ -32,10 +32,10 @@ exports.userLoginValidation = userLoginValidation;
 var userUpdateFavoritesValidation = function () {
     return [
         (0, express_validator_1.body)('favoriteGames').isArray(),
-        (0, express_validator_1.body)('*.id', 'O id do item precisar ser um número').isNumeric(),
-        (0, express_validator_1.body)('*.title', 'O título (title) do item precisar ser uma string').isString(),
-        (0, express_validator_1.body)('*.thumbnail', 'A thumbnail do item precisar ser uma string').isString(),
-        (0, express_validator_1.body)('*.genre', 'O gênero (genre) do item precisar ser uma string').isString(),
+        (0, express_validator_1.body)('favoriteGames.*.id', 'O id do item precisar ser um número').isNumeric(),
+        (0, express_validator_1.body)('favoriteGames.*.title', 'O título (title) do item precisar ser uma string').isString(),
+        (0, express_validator_1.body)('favoriteGames.*.thumbnail', 'A thumbnail do item precisar ser uma string').isString(),
+        (0, express_validator_1.body)('favoriteGames.*.genre', 'O gênero (genre) do item precisar ser uma string').isString(),
     ];
 };
 exports.userUpdateFavoritesValidation = userUpdateFavoritesValidation;
