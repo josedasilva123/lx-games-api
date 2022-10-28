@@ -53,7 +53,7 @@ Padrão de resposta:
 		"id": "62a8d73efef5dcd41200bef3",
 		"name": "José da Silva",
 		"email": "josedasilva@email.com",
-        "favoriteGames": []
+                "favoriteGames": []
 	},
 	"token": "eBJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAyYThkNzNlZmVmNWRjZDQxMjAwYmVmOSIsIm5hbWUiOiJBbGV4IENvbmRlciIsImVtYWlsIjoiYWxleC52LmNvbmRlckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzYxNTIsImV4cCI6MTY1NTI3OTM1Mn0.trsb8P58a6U5aTV7Xjf2x1fRIEHa81X-kEx7p_DEOPE"
 }
@@ -80,7 +80,7 @@ Padrão de resposta:
 		"id": "62a8d73efef5dcd41200bef3",
 		"name": "José da Silva",
 		"email": "josedasilva@email.com",
-        "favoriteGames": []
+                "favoriteGames": []
 	}
 }
 ```
